@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Urbano Neon — Playlist</title>
+
+  <!-- Link al CSS -->
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <!-- Fondos neón (decorativos) -->
+  <div class="neon-bg"></div>
+
+  <header class="header">
+    <div class="logo">
+      <!-- SVG logo neón pequeño -->
+      <svg width="48" height="48" viewBox="0 0 24 24" fill="none" aria-hidden="true" xmlns="http://www.w3.org/2000/svg">
+        <path d="M9 17a3 3 0 1 0 0 6 3 3 0 0 0 0-6zM20 3v10.5A3.5 3.5 0 0 1 16.5 17 3.5 3.5 0 0 1 13 13.5V6l7-3z" fill="currentColor"/>
+      </svg>
+    </div>
+
+    <h1 class="title">Sebastián — Neon Mix</h1>
+
+    <nav class="nav-filters" aria-label="Filtros">
+      <button class="filter active" data-filter="all">Todos</button>
+      <button class="filter" data-filter="bryant">Bryant Myers</button>
+      <button class="filter" data-filter="anuel">Anuel AA</button>
+      <button class="filter" data-filter="blessd">Blessd</button>
+      <button class="filter" data-filter="ryan">Ryan Castro</button>
+      <button class="filter" data-filter="kaleth">Kaleth Morales</button>
+    </nav>
+  </header>
+
+  <main class="main">
+    <!-- Reproductor principal -->
+    <section class="player">
+      <div class="player-card">
+        <!-- Cambia la src por la ID que quieras como inicial -->
+        <iframe id="mainPlayer"
+                src="https://www.youtube.com/embed/bjzYhXz0Qig?rel=0"
+                title="Reproductor principal"
+                frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                allowfullscreen></iframe>
+
+        <div class="player-meta">
+          <h2 id="playerTitle">Bryant Myers — Air Drop</h2>
+          <p id="playerSub">urbano · 2023</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Galería de thumbnails -->
+    <section class="gallery" aria-label="Galería de canciones">
+      <div id="videoGrid" class="grid"></div>
+    </section>
+
+    <!-- Playlist lateral compacta -->
+    <aside class="playlist">
+      <h3>Lista rápida</h3>
+      <ul id="quickList"></ul>
+    </aside>
+  </main>
+
+  <footer class="footer">
+    <p>© <span id="year"></span> Sebastián — Neon Mix</p>
+  </footer>
+
+  <!-- JS -->
+  <script src="main.js"></script>
+</body>
+</html>
